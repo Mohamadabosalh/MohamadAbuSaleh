@@ -1,0 +1,100 @@
+﻿body {
+    background-image: url(bmw.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: cursive;
+    margin: 0;
+}
+
+#circle1 {
+    width: 300px;
+    height: 300px;
+    border-radius: 80%;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.7); /* تم تعديل الظلال لتكون أقوى */
+    animation: spin 7s linear infinite;
+    background-image: url(bmw.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Broadway, cursive;
+    font-size: 24px; /* زيادة حجم النص */
+    color: #ffffff; /* تغيير اللون الأبيض للنص */
+    text-align: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* إضافة تأثير الظل للنص */
+}
+
+/* يضيف تأثير التدوير للدائرة */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* تحسين النصوص داخل الأزرار */
+#panel, #flip {
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    border: solid 1px #c3c3c3;
+    color: white;
+    font-family: Dubai, cursive;
+    font-size: 18px;
+    margin: 0;
+}
+
+#panel {
+    padding: 30px;
+    display: none;
+}
+
+#flip {
+    cursor: pointer;
+}
+
+/* Media Queries for mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        height: 100vh;
+        padding: 10px;
+    }
+
+    #circle1 {
+        width: 250px;
+        height: 250px;
+        font-size: 20px; /* تقليل حجم الخط قليلاً للهواتف */
+    }
+
+    #panel, #flip {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #circle1 {
+        width: 200px;
+        height: 200px;
+        font-size: 18px; /* تقليل الحجم ليكون مناسبًا بشكل أفضل على الهواتف الصغيرة */
+    }
+
+    #panel, #flip {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    body {
+        padding: 5px;
+    }
+}
