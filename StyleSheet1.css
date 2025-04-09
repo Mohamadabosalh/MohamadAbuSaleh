@@ -1,20 +1,21 @@
-﻿body {
+﻿/* التصميم الأساسي */
+body {
     background-image: url(bmw.jpg);
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    height: 95vh;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: cursive;
-    margin: 0;
 }
 
 #circle1 {
     width: 300px;
     height: 300px;
     border-radius: 80%;
-    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.7); /* تم تعديل الظلال لتكون أقوى */
+    box-shadow: 0 0 20px 10px;
+    margin-right: 1000px;
     animation: spin 7s linear infinite;
     background-image: url(bmw.jpg);
     background-position: center;
@@ -22,18 +23,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Broadway, cursive;
-    font-size: 24px; /* زيادة حجم النص */
-    color: #ffffff; /* تغيير اللون الأبيض للنص */
-    text-align: center;
-    padding: 20px;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    position: relative;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* إضافة تأثير الظل للنص */
+    font-family: Broadway;
+    font-size: 30px;
+    color: lightyellow;
 }
 
-/* يضيف تأثير التدوير للدائرة */
+/* إضافة التدوير */
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -43,58 +38,58 @@
     }
 }
 
-/* تحسين النصوص داخل الأزرار */
 #panel, #flip {
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     background-color: black;
     border: solid 1px #c3c3c3;
+    margin-top: -600px;
     color: white;
-    font-family: Dubai, cursive;
-    font-size: 18px;
-    margin: 0;
+    font-family: Dubai;
 }
 
 #panel {
-    padding: 30px;
+    padding: 50px;
     display: none;
 }
 
-#flip {
-    cursor: pointer;
-}
-
-/* Media Queries for mobile responsiveness */
+/* استعلام وسائط لتصميم متجاوب (Responsive) عند عرض الصفحة على شاشة صغيرة */
 @media (max-width: 768px) {
-    body {
-        height: 100vh;
-        padding: 10px;
-    }
-
+    /* تكبير العناصر عند عرضها على الهواتف */
     #circle1 {
         width: 250px;
         height: 250px;
-        font-size: 20px; /* تقليل حجم الخط قليلاً للهواتف */
+        font-size: 24px; /* تكبير النص */
     }
 
-    #panel, #flip {
-        font-size: 16px;
+    body {
+        font-size: 20px; /* تكبير النص الأساسي */
+        height: 100vh; /* تغيير ارتفاع الجسم ليغطي كامل الشاشة */
+    }
+
+    #flip, #panel {
+        font-size: 18px; /* تكبير النصوص في الأزرار */
+    }
+
+    /* تكبير المسافة بين العناصر عند عرضها على شاشة صغيرة */
+    #panel {
+        padding: 30px;
     }
 }
 
+/* استعلام وسائط لشاشات أصغر من 480px (مثل الهواتف المحمولة الصغيرة) */
 @media (max-width: 480px) {
     #circle1 {
         width: 200px;
         height: 200px;
-        font-size: 18px; /* تقليل الحجم ليكون مناسبًا بشكل أفضل على الهواتف الصغيرة */
-    }
-
-    #panel, #flip {
-        font-size: 14px;
-        padding: 8px;
+        font-size: 20px; /* تكبير النص بشكل أكبر */
     }
 
     body {
-        padding: 5px;
+        font-size: 18px; /* تكبير النصوص أكثر */
+    }
+
+    #flip, #panel {
+        font-size: 16px; /* تكبير النصوص في الأزرار */
     }
 }
