@@ -8,14 +8,15 @@ body {
     align-items: center;
     justify-content: center;
     font-family: cursive;
+    margin: 0; /* إزالة أي هوامش افتراضية */
+    padding: 0; /* إزالة أي حشوات افتراضية */
 }
 
 #circle1 {
-    width: 300px;
-    height: 300px;
-    border-radius: 80%;
+    width: 30vw; /* استخدام وحدة vw لتحديد العرض بشكل نسبي */
+    height: 30vw; /* نفس الشيء بالنسبة للارتفاع */
+    border-radius: 50%; /* دائرة مثالية */
     box-shadow: 0 0 20px 10px;
-    margin-right: 1000px;
     animation: spin 7s linear infinite;
     background-image: url(bmw.jpg);
     background-position: center;
@@ -24,7 +25,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: Broadway;
-    font-size: 40px;
+    font-size: 5vw; /* استخدام وحدات نسبية لحجم الخط */
     color: lightyellow;
 }
 
@@ -39,17 +40,17 @@ body {
 }
 
 #panel, #flip {
-    padding: 5px;
+    padding: 10px;
     text-align: center;
     background-color: black;
     border: solid 1px #c3c3c3;
-    margin-top: -600px;
     color: white;
     font-family: Dubai;
+    margin-top: 20px; /* تغيير المسافة العلوية */
 }
 
 #panel {
-    padding: 50px;
+    padding: 20px;
     display: none;
 }
 
@@ -57,39 +58,39 @@ body {
 @media (max-width: 768px) {
     /* تكبير العناصر عند عرضها على الهواتف */
     #circle1 {
-        width: 250px;
-        height: 250px;
-        font-size: 24px; /* تكبير النص */
+        width: 50vw; /* تكبير الدائرة لتناسب الشاشة */
+        height: 50vw;
+        font-size: 8vw; /* تكبير النصوص بشكل أكبر */
     }
 
     body {
-        font-size: 20px; /* تكبير النص الأساسي */
+        font-size: 5vw; /* تغيير حجم النص الأساسي ليكون أكبر */
         height: 100vh; /* تغيير ارتفاع الجسم ليغطي كامل الشاشة */
     }
 
     #flip, #panel {
-        font-size: 18px; /* تكبير النصوص في الأزرار */
+        font-size: 4vw; /* تكبير النصوص في الأزرار */
     }
 
     /* تكبير المسافة بين العناصر عند عرضها على شاشة صغيرة */
     #panel {
-        padding: 30px;
+        padding: 15px;
     }
 }
 
 /* استعلام وسائط لشاشات أصغر من 480px (مثل الهواتف المحمولة الصغيرة) */
 @media (max-width: 480px) {
     #circle1 {
-        width: 200px;
-        height: 200px;
-        font-size: 20px; /* تكبير النص بشكل أكبر */
+        width: 60vw; /* تكبير الدائرة بشكل أكبر */
+        height: 60vw;
+        font-size: 12vw; /* تكبير النص بشكل أكبر */
     }
 
     body {
-        font-size: 18px; /* تكبير النصوص أكثر */
+        font-size: 6vw; /* تكبير النصوص أكثر */
     }
 
     #flip, #panel {
-        font-size: 16px; /* تكبير النصوص في الأزرار */
+        font-size: 5vw; /* تكبير النصوص في الأزرار */
     }
 }
