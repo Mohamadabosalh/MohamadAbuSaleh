@@ -3,36 +3,38 @@
 <head>
     <meta charset="utf-8" />
     <title>Mohamad AbuSalh</title>
+
+    <!-- رابط CSS -->
     <link rel="stylesheet" href="StyleSheet1.css" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#flip").click(function () {
-                $("#panel").slideToggle("slow");
-            });
-        });
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-        window.onload = function () {
-            var audio = document.getElementById('myAudio');
-            audio.play();
-        };
-    </script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- ملف JavaScript -->
+    <script src="JavaScript.js" defer></script>
 </head>
 <body>
 
     <div id="flip">Click to slide the panel down or up</div>
     <div id="panel">Hello world!</div>
 
-    <center>
-        <div class="circle" id="circle1">
-            Mohamad AbuSalh
-        </div>
-    </center>
+    <div class="circle" id="circle1">
+        Mohamad AbuSalh
+    </div>
 
-    <audio controls>
-        <source id="myAudio" src="song.mp3" type="audio/ogg">
-        <source id="myAudio" src="song.mp3" type="audio/mpeg">
+    <!-- أزرار التواصل -->
+    <div class="social-buttons">
+        <a href="https://www.instagram.com/mohamadabusalh/" class="social instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/hmode.kh.12/" class="social facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.tiktok.com/@mohamad_abusalh?lang=ar" class="social tiktok" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+    <!-- تشغيل صوت -->
+    <audio autoplay hidden id="myAudio">
+        <source src="song.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
